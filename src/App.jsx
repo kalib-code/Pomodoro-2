@@ -61,8 +61,8 @@ const App = () => {
           </div>
         </div>
         <div className="button-wrapper">
-          <Button title="Start" activeClass={startAnimate ? 'active' : undefined} _callback={startTimer} />
-          <Button title="Pause" activeClass={!startAnimate ? 'active' : undefined} _callback={pauseTimer} />
+          <Button title="Start" activeClass={startAnimate ? 'active-label' : undefined} _callback={startTimer} />
+          <Button title="Pause" activeClass={!startAnimate ? 'active-label' : undefined} _callback={pauseTimer} />
         </div>
       </> : <SetPomodoro />}
     </div>
