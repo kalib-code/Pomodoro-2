@@ -3,7 +3,7 @@ import {CountdownCircleTimer} from 'react-countdown-circle-timer'
 import { SettingsContext } from '../context/SettingsContext'
 const CountdownAnimation = ({ timer, animate, children}) => {
 
-  const { stopAimate } = useContext(SettingsContext)
+  const { stopAimate, playSound } = useContext(SettingsContext)
 
     return (
       <CountdownCircleTimer
@@ -19,7 +19,10 @@ const CountdownAnimation = ({ timer, animate, children}) => {
         size={220}
         trailColor="#151932"
         onComplete={ () => {
-          stopAimate()
+          stopAimate();
+          playSound('https://freesound.org/data/previews/337/337049_3232293-lq.mp3')
+
+          
         }}
       >
         {children}

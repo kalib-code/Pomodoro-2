@@ -64,6 +64,11 @@ function SettingsContextProvider(props) {
         setStartAnimate(false)
     }
 
+    function playSound(url) {
+      const audio = new Audio(url);
+      audio.play();
+    }
+
     return (
         <SettingsContext.Provider value={{
             pomodoro, 
@@ -75,7 +80,8 @@ function SettingsContextProvider(props) {
             children,
             SettingsBtn,
             setCurrentTimer,
-            stopAimate
+            stopAimate,
+            playSound,
         }}>
             {props.children}
         </SettingsContext.Provider>
