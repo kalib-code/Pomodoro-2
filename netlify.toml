@@ -1,3 +1,5 @@
+[build]
+  functions = "lambda"
 [[redirects]]
   from = "/*"
   to = "/index.html"
